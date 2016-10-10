@@ -1,0 +1,63 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Exotic Butters</title>
+<link rel="icon" type="image/png" href="exoticfavicon.png">
+<meta name="description" content="Click for exotic butters">
+</head>
+
+<style>
+body {
+	width: 100%;
+	height: 100%;
+	margin: 0;
+}
+.butters {
+	background-image: url("exoticbutters.png");
+	background-color: transparent;
+	width: 141px;
+	height: 105px;
+	border: 0;
+	display: block;
+	margin: auto;
+	position: absolute;
+	top: 0; left: 0; bottom: 0; right: 0;
+	cursor: pointer;
+}
+footer {
+	display: block;
+	float: right;
+}
+p {
+	font-family: monospace;
+}
+a:link {
+	text-decoration: none;
+}
+</style>
+
+<body>
+<div>
+<audio id="exotic">
+<source src="exoticbuttersaudio.mp3" preload="auto">
+<source src="exoticbuttersaudio.ogg" preload="auto">
+</audio>
+<button onclick="butter();" class="butters">
+<script>
+function butter() {
+    var audio = document.getElementById('exotic');
+    if (audio.paused) {
+        audio.play();
+    }else{
+        audio.currentTime = 0
+    }
+}
+</script>
+</div>
+<footer>
+<p>Butter 1.1 - Thanks <a href="https://www.reddit.com/user/TransformerCompton">u/TransformerCompton</a>!
+<br>Audio from <a href="http://store.steampowered.com/app/506610/">FNAF: Sister Location</a>
+<br>Made by <a href="http://twitter.com/LarkDiet">an anthropomorphic bird</a></p>
+</footer>
+</body>
+</html>
